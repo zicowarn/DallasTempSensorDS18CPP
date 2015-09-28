@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "error/DallasTempSensorDS18CPPErrors.h"
+#include "features/DallasTempSensorDS18CPPFeatures.h"
 
 using namespace std;
 
@@ -30,6 +31,7 @@ void testFunc1(){
 
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	testFunc2();
-	return 0;
+	DallasTempSensorDS18Sensor mSensor(DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20, "");
+	mSensor.say();
+	cout<< mSensor.BASE_DIRECTORY<<endl;
 }
