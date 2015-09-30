@@ -1,6 +1,7 @@
 # DallasTempSensorDS18CPP
+=================================================================================================
 
-This c++ project provide a rein C++ API and represents a temperature sensor of type w1-thermosensor 
+API, This c++ project provide a rein C++ API and represents a temperature sensor of type w1-thermosensor 
 
 ### File structure of this project:
 ----
