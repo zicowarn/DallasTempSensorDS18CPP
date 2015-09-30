@@ -1,8 +1,33 @@
 /*
- * DallasTempSensorDS18CPPErrors.cpp
+ * @Title: DallasTempSensorDS18CPPErrors.cpp
+ * @Description: TODO
+ * @author: mrwang
+ * @Created on: 28.09.2015 23:22:40
+ * @Last modified by: mrwang
+ * @Last modified on: 29.09.2015 23:22:40
+ * @Version: V1.0
+ * @Compiler: GCC
+ * @Language: C/C++
+ * @License: The MIT License (MIT)
+ * @Copyright: 2015 mrwang
  *
- *  Created on: 28.09.2015
- *      Author: mrwang
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 #include <stdlib.h>
@@ -14,15 +39,28 @@
 
 using namespace std;
 
+/**
+ *
+ * @param msg
+ */
 DallasTempSensorDS18ErrorBase::DallasTempSensorDS18ErrorBase(
 		const std::string& msg) throw () :
 		mMesg(msg), mFile("<unknow file>"), mFunc("<unknow func>"), mLine(-1), mStackTraceSize(
 				0) {
 }
 
+/**
+ *
+ */
 DallasTempSensorDS18ErrorBase::~DallasTempSensorDS18ErrorBase() throw () {
 }
 
+/**
+ *
+ * @param file
+ * @param func
+ * @param line
+ */
 void DallasTempSensorDS18ErrorBase::Init(const char* file, const char* func,
 		int line) {
 	mFile = file;
@@ -32,14 +70,26 @@ void DallasTempSensorDS18ErrorBase::Init(const char* file, const char* func,
 
 }
 
+/**
+ *
+ * @return
+ */
 std::string DallasTempSensorDS18ErrorBase::GetClassName() const {
 	return "DallasTempSensorDS18ErrorBase";
 }
 
+/**
+ *
+ * @return
+ */
 const char* DallasTempSensorDS18ErrorBase::what() const throw () {
 	return ToString().c_str();
 }
 
+/**
+ *
+ * @return
+ */
 const std::string& DallasTempSensorDS18ErrorBase::ToString() const {
 	if (mWhat.empty()) {
 		stringstream sstr("");
@@ -57,10 +107,19 @@ const std::string& DallasTempSensorDS18ErrorBase::ToString() const {
 	return mWhat;
 }
 
+/**
+ *
+ * @return
+ */
 std::string DallasTempSensorDS18ErrorBase::GetMessage() const {
 	return mMesg;
 }
 
+
+/**
+ *
+ * @return
+ */
 std::string DallasTempSensorDS18ErrorBase::GetStackTrace() const {
 	if (mStackTraceSize == 0)
 		return "<No stack trace>\n";
