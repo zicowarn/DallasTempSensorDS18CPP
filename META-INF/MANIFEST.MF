@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DallasTempSensorDS18CPP
+Bundle-SymbolicName: DallasTempSensorDS18CPP
+Bundle-Version: 1.0.0.qualifier
