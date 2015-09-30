@@ -1,0 +1,5 @@
+<map id="DallasTempSensorDS18Sensor::DallasTempSensorDS18Sensor" name="DallasTempSensorDS18Sensor::DallasTempSensorDS18Sensor">
+<area shape="rect" id="node2" href="$classDallasTempSensorDS18Sensor.html#a73d1190ffa3c03c7eda4676865c0ca3c" title="DallasTempSensorDS18Sensor\l::slave_prefix" alt="" coords="270,5,477,46"/>
+<area shape="rect" id="node3" href="$classDallasTempSensorDS18Sensor.html#a8532cd5fbc50a4cb73e402fe3cf38e9d" title="DallasTempSensorDS18Sensor\l::get_temperatures" alt="" coords="270,70,477,111"/>
+<area shape="rect" id="node4" href="$classDallasTempSensorDS18Sensor.html#a16ba506071c64435e593b189a11d7ded" title="DallasTempSensorDS18Sensor\l::raw_sensor_value" alt="" coords="526,70,733,111"/>
+</map>

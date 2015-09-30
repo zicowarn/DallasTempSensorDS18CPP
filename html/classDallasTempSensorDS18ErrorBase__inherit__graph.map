@@ -1,0 +1,8 @@
+<map id="DallasTempSensorDS18ErrorBase" name="DallasTempSensorDS18ErrorBase">
+<area shape="rect" id="node3" href="$classDictionaryNotCorrectError.html" title="DictionaryNotCorrectError" alt="" coords="429,5,603,32"/>
+<area shape="rect" id="node4" href="$classKernelModuleLoadError.html" title="KernelModuleLoadError" alt="" coords="437,56,595,83"/>
+<area shape="rect" id="node5" href="$classNoSensorFoundError.html" title="NoSensorFoundError" alt="" coords="444,107,588,133"/>
+<area shape="rect" id="node6" href="$classSensorNotReadyError.html" title="SensorNotReadyError" alt="" coords="441,157,591,184"/>
+<area shape="rect" id="node7" href="$classTestException.html" title="TestException" alt="" coords="463,208,569,235"/>
+<area shape="rect" id="node8" href="$classUnsupportUnitError.html" title="UnsupportUnitError" alt="" coords="449,259,583,285"/>
+</map>

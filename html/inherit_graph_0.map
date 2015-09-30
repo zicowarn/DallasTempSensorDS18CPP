@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classDallasTempSensorDS18ErrorBase.html" title="DallasTempSensorDS18ErrorBase" alt="" coords="133,132,357,159"/>
+<area shape="rect" id="node3" href="$classDictionaryNotCorrectError.html" title="DictionaryNotCorrectError" alt="" coords="405,5,579,32"/>
+<area shape="rect" id="node4" href="$classKernelModuleLoadError.html" title="KernelModuleLoadError" alt="" coords="413,56,571,83"/>
+<area shape="rect" id="node5" href="$classNoSensorFoundError.html" title="NoSensorFoundError" alt="" coords="420,107,564,133"/>
+<area shape="rect" id="node6" href="$classSensorNotReadyError.html" title="SensorNotReadyError" alt="" coords="417,157,567,184"/>
+<area shape="rect" id="node7" href="$classTestException.html" title="TestException" alt="" coords="439,208,545,235"/>
+<area shape="rect" id="node8" href="$classUnsupportUnitError.html" title="UnsupportUnitError" alt="" coords="425,259,559,285"/>
+</map>

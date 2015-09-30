@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classDallasTempSensorDS18Sensor.html#ae3b7a7069444521be5b6f455f4cbabca" title="DallasTempSensorDS18Sensor\l::get_available_sensors" alt="" coords="105,23,311,65"/>
+<area shape="rect" id="node3" href="$DallasTempSensorDS18CPPFeatures_8cpp.html#af12153957949d01b165a0834e734951d" title="listdir" alt="" coords="373,5,427,32"/>
+<area shape="rect" id="node4" href="$DallasTempSensorDS18CPPFeatures_8cpp.html#a0c30767b3dfae2094b5c0c7973b0e74c" title="is_sensor" alt="" coords="361,56,439,83"/>
+</map>
