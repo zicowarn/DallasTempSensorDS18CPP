@@ -81,7 +81,7 @@ for (unsigned it = 0; it < values2.size(); it++) {
 	std::cout << " Values => " << values2[it] << std::endl;
 }
 
-/ *You be allowed to get the values from the digital thermosensor. and
+/* You be allowed to get the values from the digital thermosensor. and
  * if you just specify only one temperature unit, you can get the 
  * converted values of the specified unit 
  */
