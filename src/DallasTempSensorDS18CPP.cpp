@@ -4,8 +4,8 @@
  * @author: mrwang
  * @Created on: 28.09.2015 23:22:40
  * @Last modified by: mrwang
- * @Last modified on: 29.09.2015 23:22:40
- * @Version: V1.0
+ * @Last modified on: 30.09.2015 12:44:40
+ * @Version: V1.5.dev
  * @Compiler: GCC
  * @Language: C/C++
  * @License: The MIT License (MIT)
@@ -31,37 +31,65 @@
  */
 
 #include <iostream>
+#include <fstream>
+#include <sys/stat.h>
 #include "error/DallasTempSensorDS18CPPErrors.h"
 #include "features/DallasTempSensorDS18CPPFeatures.h"
 
-using namespace std;
-
-
-
-int testFunc2(){
-	MY_THROW(TestException, "f2 throw");
-	return 0;
-}
-
-void testFunc1(){
-	try{
-		testFunc2();
-	}
-	catch (TestException& e)
-	{
-		cout<< e.what() <<endl;
-	}
-}
-
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	DallasTempSensorDS18Sensor mSensor(DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20, "000006c4fdb1");
-	int types[2]={DallasTempSensorDS18Sensor::THERM_SENSOR_DS1822, DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20};
-	std::map<std::string, int> sensors = mSensor.get_available_sensors(types);
-	std::cout << "mymap contains:\n";
-	for (std::map<std::string, int>::const_iterator it=sensors.begin(); it!=sensors.end(); ++it){
-		std::cout << it->first << " => " << it->second << '\n';
+	std::cout << "!!! Welcome to DallasTempSensorDS18CPP !!!" << std::endl;
+
+	/*You be allowed to create a instance of class DallasTempSensorDS18CPP,
+	 if you do not know type and id of sensors*/
+	//* DallasTempSensorDS18Sensor mSensor(NULL, "");
+
+	/*You be allowed to create a instance of class DallasTempSensorDS18CPP also like this,
+	 if you just do not know id of sensors*/
+	//*DallasTempSensorDS18Sensor mSensor(DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20, "");
+
+	/*You be allowed to create a instance of class DallasTempSensorDS18CPP also like this,
+	 if you exactly know id of sensors*/
+	DallasTempSensorDS18Sensor mSensor(
+			DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20, "000006c4fdb1");
+
+	int units[3] = { DallasTempSensorDS18Sensor::DEGREES_C,
+			DallasTempSensorDS18Sensor::DEGREES_F };
+	/*You be allowed to get the values from the digital thermosensor. and
+	 * if you specify more than one temperature unit, you can get the converted
+	 * values of the specified units
+	 */
+	std::vector<float> values = mSensor.get_temperatures(units);
+	std::cout << "vector contains: " << std::endl;
+	for (unsigned it = 0; it < values.size(); it++) {
+		/* C
+		 * F
+		 */
+		std::cout << " Values => " << values[it] << std::endl;
 	}
 
+	/*You be allowed to get the values from the digital thermosensor. and
+	 * if you even do not specify any temperature unit, you can get all
+	 * converted values of all available units
+     */
+	std::vector<float> values2 = mSensor.get_temperatures();
+	std::cout << "vector contains2 : " << std::endl;
+	for (unsigned it = 0; it < values2.size(); it++) {
+		/* C
+		 * F
+		 * Kelvin
+		 */
+		std::cout << " Values => " << values2[it] << std::endl;
+	}
 
+	/*You be allowed to get the values from the digital thermosensor. and
+	 * if you just specify only one temperature unit, you can get the
+	 * converted values of the specified unit
+	 */
+	float values3 = mSensor.get_temperature(
+			DallasTempSensorDS18Sensor::DEGREES_C);
+	std::cout << " Value in DEGREES_C  => " << values3 << std::endl;
+	values3 = mSensor.get_temperature(DallasTempSensorDS18Sensor::DEGREES_F);
+	std::cout << " Value in DEGREES_F  => " << values3 << std::endl;
+	values3 = mSensor.get_temperature(DallasTempSensorDS18Sensor::KELVIN);
+	std::cout << " Value in KELVIN  => " << values3 << std::endl;
 }

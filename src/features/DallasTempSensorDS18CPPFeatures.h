@@ -4,8 +4,8 @@
  * @author: mrwang
  * @Created on: 29.09.2015 23:22:40
  * @Last modified by: mrwang
- * @Last modified on: 29.09.2015 23:22:40
- * @Version: V1.0
+ * @Last modified on: 30.09.2015 12:28:40
+ * @Version: V1.5.dev
  * @Compiler: GCC
  * @Language: C/C++
  * @License: The MIT License (MIT)
@@ -126,7 +126,7 @@ public:
 
 	/**
 	 *
-	 * @param units
+	 * @param in_units
 	 * @return
 	 */
 	std::vector<float> get_temperatures(int in_units[]);
@@ -144,7 +144,7 @@ public:
 protected:
 
 	const static int RETRY_ATTEMPS = 10;
-	static float RETRY_DELAY_SECONDS;
+	static int RETRY_DELAY_MILLISECONDS;
 	static std::map<std::string,int> RESOLVE_TYPE_STR;
 	static std::map<int, std::string> TYPE_NAMES;
 
