@@ -1,27 +1,23 @@
 # DallasTempSensorDS18CPP
-===============================================================================
 
 This c++ project provide a rein C++ API and represents a temperature sensor of type w1-thermosensor 
 
 ### File structure of this project:
-	
+----
+cccccc
 
 ### Dependent library:
+----
 
 there is no specific dependent manner.
 
-....................................
-
-
------------------------------------------------------------------
-
-
 ## Usage:
-------------------------------------------------------------------
+----
 none
 
 
 ### Version
+---
 V1
 
 ### Installation
@@ -37,7 +33,7 @@ $ git clone [git-repo-url] DallasTempSensorDS18CPP
  - Add Code Comments
  - Test code
 
-License
+### License
 ----
 The MIT License (MIT)
 
