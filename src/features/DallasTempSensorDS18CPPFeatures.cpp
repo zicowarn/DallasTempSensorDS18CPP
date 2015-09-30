@@ -245,6 +245,7 @@ float DallasTempSensorDS18Sensor::get_temperature(int unit){
 	else if (unit == 0x02) return UNIT_FACTORS_F(temp_value);
 	else if (unit == 0x02) return UNIT_FACTORS_K(temp_value);
 	else MY_THROW(UnsupportUnitError, " ");
+	return 0.1;
 }
 
 /**
@@ -286,9 +287,8 @@ std::vector<float> DallasTempSensorDS18Sensor::get_temperatures(int in_units[]){
 
 
 /********************************/
-/*     Class private functions  */
+/*     Class static functions   */
 /********************************/
-
 
 /**
  *
@@ -327,6 +327,11 @@ std::map<std::string, int> DallasTempSensorDS18Sensor::get_available_sensors(
 	}
 	return m;
 }
+
+/********************************/
+/*     Class private functions   */
+/********************************/
+
 
 /**
  *

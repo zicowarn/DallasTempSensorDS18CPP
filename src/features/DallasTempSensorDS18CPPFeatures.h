@@ -150,6 +150,8 @@ protected:
 
 private:
 
+
+	void _load_kernel_modules();
 	/**
 	 *
 	 * @return
