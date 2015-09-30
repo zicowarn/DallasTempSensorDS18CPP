@@ -22,7 +22,7 @@ var classDallasTempSensorDS18Sensor =
     [ "KELVIN", "classDallasTempSensorDS18Sensor.html#a9938d0ced2b6f7ee3f949a4d94940090", null ],
     [ "RESOLVE_TYPE_STR", "classDallasTempSensorDS18Sensor.html#a4afb81476dc021592269fd156be9955a", null ],
     [ "RETRY_ATTEMPS", "classDallasTempSensorDS18Sensor.html#a83a225fc7b47d742396d64077f95a8f2", null ],
-    [ "RETRY_DELAY_SECONDS", "classDallasTempSensorDS18Sensor.html#a900c30d31abc55b256ac4b310ccb5906", null ],
+    [ "RETRY_DELAY_MILLISECONDS", "classDallasTempSensorDS18Sensor.html#a849f0748cea025c290f805a9f7449d75", null ],
     [ "SLAVE_FILE", "classDallasTempSensorDS18Sensor.html#ac99842a3e613c56cafb478030838dd42", null ],
     [ "THERM_SENSOR_DS1822", "classDallasTempSensorDS18Sensor.html#aab0463bcd9e5212b1e78f1d0d95fc6a6", null ],
     [ "THERM_SENSOR_DS18B20", "classDallasTempSensorDS18Sensor.html#a670efe9b5fe40bd118c1ab7ba60120ce", null ],
