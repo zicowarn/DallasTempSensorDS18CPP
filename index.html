@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dallastempsensords18cpp by zicowarn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Dallastempsensords18cpp</h1>
+      <h2 class="project-tagline">This c++ project provide a rein C++ API and represents a temperature sensor of type w1-thermosensor</h2>
+      <a href="https://github.com/zicowarn/DallasTempSensorDS18CPP" class="btn">View on GitHub</a>
+      <a href="https://github.com/zicowarn/DallasTempSensorDS18CPP/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/zicowarn/DallasTempSensorDS18CPP/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="dallastempsensords18cpp" class="anchor" href="#dallastempsensords18cpp" aria-hidden="true"><span class="octicon octicon-link"></span></a>DallasTempSensorDS18CPP</h1>
+
+<h1></h1>
+
+<p>This c++ project provide a rein C++ API and represents a temperature sensor of type w1-thermosensor </p>
+
+<h3>
+<a id="file-structure-of-this-project" class="anchor" href="#file-structure-of-this-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>File structure of this project:</h3>
+
+<hr>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>in folder src/error</p>
+
+<blockquote>
+<ul>
+<li>DallasTempSensorDS18CPPErrors.cpp</li>
+<li>DallasTempSensorDS18CPPErrors.h</li>
+</ul>
+</blockquote>
+
+<p>in folder src/features</p>
+
+<blockquote>
+<ul>
+<li>DallasTempSensorDS18CPPFeatures.cpp</li>
+<li>DallasTempSensorDS18CPPFeatures.h</li>
+</ul>
+</blockquote>
+
+<p>in folder src</p>
+
+<blockquote>
+<ul>
+<li>DallasTempSensorDS18CPP.cpp  # for test the features</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="dependent-head-files" class="anchor" href="#dependent-head-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependent head files:</h3>
+
+<hr>
+
+<div class="highlight highlight-source-c++"><pre>#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>map<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>vector<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>string<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>exception<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>cxxabi.h<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>execinfo.h<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>sstream<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>dirent.h<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdlib.h<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>unistd.h<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>fstream<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>algorithm<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>string<span class="pl-pds">&gt;</span></span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>sys/stat.h<span class="pl-pds">&gt;</span></span></pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h2>
+
+<hr>
+
+<div class="highlight highlight-source-c++"><pre>std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>!!! Welcome to DallasTempSensorDS18CPP !!!<span class="pl-pds">"</span></span> &lt;&lt; std::endl;
+<span class="pl-c">/* You be allowed to create a instance of class DallasTempSensorDS18CPP,</span>
+<span class="pl-c">if you do not know type and id of sensors*/</span>
+DallasTempSensorDS18Sensor <span class="pl-en">mSensor</span>(<span class="pl-c1">NULL</span>, <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);
+
+<span class="pl-c">/* You be allowed to create a instance of class DallasTempSensorDS18CPP also like this, if you just do not know id of sensors*/</span>
+DallasTempSensorDS18Sensor <span class="pl-en">mSensor</span>(DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20, <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);
+
+<span class="pl-c">/* You be allowed to create a instance of class DallasTempSensorDS18CPP also like this, if you exactly know id of sensors*/</span>
+DallasTempSensorDS18Sensor <span class="pl-en">mSensor</span>(DallasTempSensorDS18Sensor::THERM_SENSOR_DS18B20,<span class="pl-s"><span class="pl-pds">"</span>000006c4fdb1<span class="pl-pds">"</span></span>);
+
+<span class="pl-k">int</span> units[<span class="pl-c1">3</span>] = { DallasTempSensorDS18Sensor::DEGREES_C,DallasTempSensorDS18Sensor::DEGREES_F };
+
+<span class="pl-c">/* You be allowed to get the values from the digital thermosensor. and</span>
+<span class="pl-c"> * if you specify more than one temperature unit, you can get the converted</span>
+<span class="pl-c"> * values of the specified units</span>
+<span class="pl-c">*/</span>
+std::vector&lt;<span class="pl-k">float</span>&gt; values = <span class="pl-smi">mSensor</span>.get_temperatures(units);
+std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>vector contains: <span class="pl-pds">"</span></span> &lt;&lt; std::endl;
+<span class="pl-k">for</span> (<span class="pl-k">unsigned</span> it = <span class="pl-c1">0</span>; it &lt; values.size(); it++) {
+    <span class="pl-c">/* C</span>
+<span class="pl-c">     * F</span>
+<span class="pl-c">     */</span>
+    std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> Values =&gt; <span class="pl-pds">"</span></span> &lt;&lt; values[it] &lt;&lt; std::endl;
+}
+
+<span class="pl-c">/* You be allowed to get the values from the digital thermosensor. and</span>
+<span class="pl-c"> * if you even do not specify any temperature unit, you can get all</span>
+<span class="pl-c"> * converted values of all available units</span>
+<span class="pl-c"> */</span>
+std::vector&lt;<span class="pl-k">float</span>&gt; values2 = <span class="pl-smi">mSensor</span>.get_temperatures();
+std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>vector contains2 : <span class="pl-pds">"</span></span> &lt;&lt; std::endl;
+<span class="pl-k">for</span> (<span class="pl-k">unsigned</span> it = <span class="pl-c1">0</span>; it &lt; values2.size(); it++) {
+    <span class="pl-c">/* C</span>
+<span class="pl-c">     * F</span>
+<span class="pl-c">     * Kelvin</span>
+<span class="pl-c">     */</span>
+    std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> Values =&gt; <span class="pl-pds">"</span></span> &lt;&lt; values2[it] &lt;&lt; std::endl;
+}
+
+<span class="pl-c">/* You be allowed to get the values from the digital thermosensor. and</span>
+<span class="pl-c"> * if you just specify only one temperature unit, you can get the </span>
+<span class="pl-c"> * converted values of the specified unit </span>
+<span class="pl-c"> */</span>
+<span class="pl-k">float</span> values3 = <span class="pl-smi">mSensor</span>.get_temperature(DallasTempSensorDS18Sensor::DEGREES_C);
+std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> Value in DEGREES_C  =&gt; <span class="pl-pds">"</span></span> &lt;&lt; values3 &lt;&lt; std::endl;
+values3 = <span class="pl-smi">mSensor</span>.get_temperature(DallasTempSensorDS18Sensor::DEGREES_F);
+std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> Value in DEGREES_F  =&gt; <span class="pl-pds">"</span></span> &lt;&lt; values3 &lt;&lt; std::endl;
+values3 = <span class="pl-smi">mSensor</span>.get_temperature(DallasTempSensorDS18Sensor::KELVIN);
+std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> Value in KELVIN  =&gt; <span class="pl-pds">"</span></span> &lt;&lt; values3 &lt;&lt; std::endl;</pre></div>
+
+<h3>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version</h3>
+
+<hr>
+
+<p>V1.5.0</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<hr>
+
+<div class="highlight highlight-source-shell"><pre>$ git clone [git-repo-url] DallasTempSensorDS18CPP</pre></div>
+
+<h3>
+<a id="todos" class="anchor" href="#todos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Todos</h3>
+
+<hr>
+
+<ul>
+<li>Add Code Comments</li>
+<li>Test code</li>
+</ul>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<hr>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Zhichao Wang</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+<p><strong>Free Software, Hell Yeah!</strong></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/zicowarn/DallasTempSensorDS18CPP">Dallastempsensords18cpp</a> is maintained by <a href="https://github.com/zicowarn">zicowarn</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
