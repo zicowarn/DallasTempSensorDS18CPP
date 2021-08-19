@@ -1,5 +1,3 @@
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=zicowarn)](https://github.com/anuraghazra/github-readme-stats)
-
 # DallasTempSensorDS18CPP
 ===============================================================================
 
